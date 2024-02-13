@@ -1,4 +1,4 @@
-name: 'CI/CD Dev'
+name: 'CI/CD'
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ on:
       - '**.md'
       - '.github/workflows/*.yaml'
       - '!.github/workflows/CICD.yaml'
-    branches: [ 'dev-env' ]
+    branches: [ 'dev-env', 'test-env', 'prod-env' ]
 
 defaults:
   run:
@@ -110,7 +110,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           shell: powershell
-          getEnvironments: '*Dev*'
+          getEnvironments: '*'
           type: 'CD'
 
   CheckForUpdates:
