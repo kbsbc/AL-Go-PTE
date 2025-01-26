@@ -49,7 +49,7 @@ on:
       artifactsRetentionDays:
         description: Number of days to keep the artifacts
         type: number
-        default: 0
+        default: 1
       artifactsNameSuffix:
         description: Suffix to add to the artifacts names
         required: false
